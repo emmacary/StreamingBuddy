@@ -1,4 +1,4 @@
 # Streaming Buddy
 
 Members: Emma Cary, Lucas Konarski, Olivia Gillman, Sophia Yang
-URL: 
+URL: https://emmacary.github.io/StreamingBuddy/
