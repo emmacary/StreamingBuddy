@@ -12,7 +12,7 @@ body {
 	text-align: center;
 	overflow: hidden;
 	align-items: center;
-	width: 99vw;
+	width: 100%;
 }
 
 /*Makes banner stick to top*/
@@ -42,6 +42,7 @@ body {
 /*Hides the hamburger icon at first*/
 .nav .icon {
 	display: none;
+	width: 100%;
 }
 
 .pageLink {
@@ -96,7 +97,7 @@ body {
 /*Content Style*/
 
 .TVdiv {
-	background-image: url("HomeTV_text.jpg");
+	background-image: url("HomeTV_text.JPG");
 	background-size: 100vw;
 	background-repeat: no-repeat;
 	padding: 30%;
@@ -144,9 +145,9 @@ body {
 	background: #212432;
     color: #ffff;
     font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-	font-size: 150%;
+	font-size: 1.5vw;
 	position: static;
-	width: 100vw;
+	width: 100%;
 	padding: 4%;
 }
 
