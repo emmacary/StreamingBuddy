@@ -1,5 +1,5 @@
 body {
-	margin: 0px; 
+	margin: 0px;
 }
 
 /*-----------------------------------------------------------------------------------------------*/
@@ -114,7 +114,7 @@ body {
 }
 
 .bar {
-	max-width: 99vw;
+	max-width: 100vw;
 }
 
 .infoBox {
@@ -146,7 +146,7 @@ body {
     font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-size: 150%;
 	position: static;
-	width: 91vw;
+	width: 100vw;
 	padding: 4%;
 }
 
@@ -200,20 +200,17 @@ p.footer {
 	flex: 50%;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 }
 
 .leftcol {
 	flex: 50%;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 }
 
 .option {
 	flex: 50%;
 }
-
 
 .pic {
 	width: 50%;

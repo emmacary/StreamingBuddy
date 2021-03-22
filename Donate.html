@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="SBStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="Logo2.png"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+    </script>
+	<title>Compatibility Test</title>
+    <style>
+        .compatcontent {
+            text-align: center;
+        }
+        
+        input, select {
+          padding: 12px 20px;
+          display: inline-block;
+          margin: 8px 0;
+          border-radius: 4px;
+          box-sizing: border-box;
+          width: 300px;
+          border: 1px solid #ccc;
+        }
+        
+        .error {
+            color: red;
+            font-size: 15px;
+        }
+        
+        /* #thanks {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            color: white;
+            border-radius: 4px;
+            background-color: grey;
+        } */
+    </style>
+</head>
+
+<script language="javascript">
+	function myFunction() {
+  		var x = document.getElementById("mynav");
+  		if (x.className === "nav") {
+    		x.className += " responsive";
+  		} else {
+   			x.className = "nav";
+  		}
+	}
+    
+    function validate() {
+        err = false;
+        if ($('select[name="donation"]').find(':selected').text() == "Donation amount*") {
+            $('.error').html('Please select a donation amount');
+            err = true;
+        }
+        
+        if (err == false) {
+            alert("Thank you for the donation!");
+			// document.getElementById("thanks").style.display = "block";
+        }
+        
+        return !err;
+    }
+</script>
+
+<body>
+	<div class="banner sticky"> 
+		<a href="index.html" class="logoLink"><img src="Logo2.png" class="logo"/></a>
+		<div class="nav" id="mynav">
+			<a href="index.html" class="pageLink" class="active"> Home </a>
+			<a class="pageLink"> Popular Now </a>
+			<a href="ComingLeaving.html" class="pageLink"> Shows Coming/Leaving </a>
+			<a href="CompatTest.html" class="pageLink"> Compatibility Test! </a>
+			<a href="review.html" class="pageLink"> Sumbit a Show Review </a>
+			<a href="Donate.html" class="active pageLink"> Donate </a>
+			<a class="pageLink"> Contact Us </a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		   	 	<i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+
+<!-- Everything above this comment goes on every page (Change only the title and meta) -->
+
+<!-- Individual Page Content in Here -->
+	<!-- Note: The banner covers part of the top of the page, so make sure you use padding to see the content -->
+
+	<div class="Picdiv" style="background-image: url(show_images/donate.jpg); height: 20px">
+	</div>
+	
+    <div class="compatcontent" style="margin-bottom: 40px;">
+        <!-- <div id="thanks">Thank you for the donation! </div> -->
+        
+        <h1>Donate Today!</h1>
+        <h3>Help support our website by paying a small contribution.</h3>
+        <form 
+            name="data"
+            method="post"
+            onsubmit="return validate()" 
+        >
+            <input type="text" name="fname" required="1" placeholder="Your first name*"/>
+            <br />
+            <input type="text" name="lname" placeholder="Your last name"/>
+            <br />
+            <input type="text" name="email" required="1" placeholder="Your email*"/>
+            <br />
+            <select name="donation" size="1">
+                <option>Donation amount*</option>
+                <option>$2</option>
+                <option>$5</option>
+                <option>$10</option>
+                <option>$15</option>
+                <option>$20</option>
+                <option>$35</option>
+                <option>$50</option>
+                <option>$100</option>
+            </select>
+            <div class="error">&nbsp</div>
+            <br />
+            <label for="ccn" style="font-size: 15px">Credit Card Info:</label>
+            <br />
+            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx*">
+            <input type="text" name="monthdate" required="1" placeholder="MM/YY*" style="width: 100px"/>
+            <input type="text" name="cvc" required="1" placeholder="CVC*" style="width: 80px"/>
+            <br />
+            <input type="submit" value="Thank you!"/>
+        </form>
+    </div>
+
+<!-- Individual Page Content Ends Here -->
+
+
+<!-- Add the footer below to every page as well -->
+	
+	<div class="footer">
+		<img src="LogoFooter.png" class="logoFoot"/>
+		<div class="footContain">
+			<div class="flexFoot">
+				<p> Streaming Buddy <p>
+				<a href="#top"> Back to Top </a>
+			</div>
+			<div class="flexFoot">
+				<p> Quick Contact Info </p>
+				<ul>
+					<li> Phone: 111-222-3333 </li>
+					<li> Email: support@streamingbuddy.com </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

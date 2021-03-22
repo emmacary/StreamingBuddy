@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="SBStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="Logo2.png"/>
+	<title>Submit a Review</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">    
+<style>    
+* {    
+  box-sizing: border-box;    
+}    
+    
+input[type=text], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=email], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+    
+label {    
+  padding: 12px 12px 12px 0;    
+  display: inline-block;    
+}    
+    
+input[type=submit] {    
+  background-color: rgb(37, 116, 161);    
+  color: white;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float: right;    
+}    
+    
+input[type=submit]:hover {    
+  background-color: #45a049;    
+}  
+
+.content {
+  padding: 3%;
+}
+
+.rpicdiv {
+  background-image: url("stars.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  padding: 15%;
+  padding-bottom: 20%;
+}
+    
+.container {    
+  border-radius: 5px;    
+  background-color: #f2f2f2;    
+  padding: 20px;    
+}    
+    
+.col-25 {    
+  float: left;    
+  width: 25%;    
+  margin-top: 6px;    
+}    
+    
+.col-75 {    
+  float: left;    
+  width: 75%;    
+  margin-top: 6px;    
+}    
+    
+/* Clear floats after the columns */    
+.row:after {    
+  content: "";    
+  display: table;    
+  clear: both;    
+}    
+    
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */    
+</style>       
+  
+</head>
+
+<script language="javascript">
+	function myFunction() {
+  		var x = document.getElementById("mynav");
+  		if (x.className === "nav") {
+    		x.className += " responsive";
+  		} else {
+   			x.className = "nav";
+  		}
+	}
+</script>
+
+<body>
+	<div class="banner sticky"> 
+		<a href="index.html" class="logoLink"><img src="Logo2.png" class="logo"/></a>
+		<div class="nav" id="mynav">
+			<a href="index.html" class="pageLink" > Home </a>
+			<a class="pageLink"> Popular Now </a>
+			<a href="ComingLeaving.html" class="pageLink"> Shows Coming/Leaving </a>
+			<a href="CompatTest.html" class="pageLink"> Compatibility Test! </a>
+			<a href="review.html" class="active pageLink"> Sumbit a Show Review </a>
+			<a href="Donate.html" class="pageLink"> Donate </a>
+			<a class="pageLink"> Contact Us </a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		   	 	<i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+
+	<!-- Everything above this comment goes on every page -->
+
+  <div class="rpicdiv">
+  </div>
+
+  <div class="content">
+  
+  <div class="text">
+    <h1>Leave a Review!</h1> 
+    <h2>Get featured on Top Picks</h2>
+    <p>Leave a review for your favorite (or least favorite) TV shows! There's a chance your pick will be featured in our "Popular Now" page, under the subsection "Our Picks", inspired by users like you!</p>
+  </div>
+     
+<div class="container">    
+  <form>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="fname">First Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="lname">Last Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">    
+      </div>    
+    </div>    
+    <div class="row">    
+        <div class="col-25">    
+          <label for="email">Email Address</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="email" id="email" name="mailid" placeholder="Your email address...">    
+        </div>    
+      </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="rate">Rating</label>    
+      </div>    
+      <div class="col-75">    
+        <select id="rate" name="rate">    
+          <option value="none">Select Rating</option>    
+          <option value="1star">1 star</option>    
+          <option value="2star">2 stars</option>    
+          <option value="3star">3 stars</option>    
+          <option value="4star">4 stars</option>    
+          <option value="5star">5 stars</option>      
+        </select>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="feed_back">Review</label>    
+      </div>    
+      <div class="col-75">    
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <input type="submit" value="Submit">    
+    </div>    
+  </form>    
+</div>    
+  <div class="text">  
+  <h2> Thank you! </h2>
+  </div>
+  </div>
+  
+  <!-- Add the footer to every page as well -->
+
+	<div class="footer">
+		<img src="LogoFooter.png" class="logoFoot"/>
+		<div class="footContain">
+			<div class="flexFoot">
+				<p> Streaming Buddy <p>
+				<a href="#top"> Back to Top </a>
+			</div>
+			<div class="flexFoot">
+				<p> Quick Contact Info </p>
+				<ul>
+					<li> Phone: 111-222-3333 </li>
+					<li> Email: support@streamingbuddy.com </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

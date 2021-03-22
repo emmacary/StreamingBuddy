@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<link rel="stylesheet" href="SBStyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="Logo2.png"/>
+	<title>Shows and Movies Coming/Leaving</title>
+</head>
+
+<script language="javascript">
+	function myFunction() {
+  		var x = document.getElementById("mynav");
+  		if (x.className === "nav") {
+    		x.className += " responsive";
+  		} else {
+   			x.className = "nav";
+  		}
+	}
+</script>
+
+<body>
+	<div class="banner sticky"> 
+		<a href="index.html" class="logoLink"><img src="Logo2.png" class="logo"/></a>
+		<div class="nav" id="mynav">
+			<a href="index.html" class="pageLink" class="active"> Home </a>
+			<a class="pageLink"> Popular Now </a>
+			<a href="ComingLeaving.html" class="active pageLink"> Shows Coming/Leaving </a>
+			<a href="CompatTest.html" class="pageLink"> Compatibility Test! </a>
+			<a href="review.html" class="pageLink"> Submit a Show Review </a>
+			<a href="Donate.html" class="pageLink"> Donate </a>
+			<a class="pageLink"> Contact Us </a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		   	 	<i class="fa fa-bars"></i></a>
+		</div>
+	</div>
+    
+<!-- Everything above this comment goes on every page (Change only the title and meta) -->
+
+<!-- Individual Page Content in Here -->
+	<!-- Note: The banner covers part of the top of the page, so make sure you use padding to see the content -->
+	
+	<div class="Picdiv" style="background-image: url(show_images/comingleaving.jpg)"></div>
+    
+    <div class="compatcontent">
+        <h1>Shows and Movies Coming and Leaving</h1>  
+        <table class="itemtable" border="0" cellpadding="3">
+        <script type="text/javascript">
+            const services = ["Netflix", "Hulu", "Disney+", "Amazon Prime", "HBO"];
+            const showsLeaving = [
+                ["Inception (2010)", "The Perks of Being a Wallflower (2012)", 
+                "Yu-Gi-Oh! Arc-V (Seasons 1-2)", "Cain and Abel (Season 1)", 
+                "Hedgehogs (2016)", "Surf’s Up (2007)"],
+                ["Garfield (2004)", "Mad Max (1980)", "Pretty Woman (1990)", 
+                "X-Men Origins: Wolverine (2009)", "Beloved (1998)", "Hitman’s Run (1999)"],
+                ["none"],
+                ["Pokémon the Series: XYZ (2016)", "Beautiful and Twisted (2015)", 
+                "The Black Stallion (1979)", "Hair (1979)", "Masters of the Universe (1987)",
+                "Star Trek VII: Generations (1994)", "Zookeeper (2011)"],
+                ["Shazam!", "The Curse of La Llorona", "Pokemon Detective Pikachu", 
+                "Die Hard", "Heartbreakers", "Mrs. Doubtfire", "Tom Sawyer"],
+            ];
+            const showsComing = [
+                ["Fast and Furious Spy Racers (Season 4)", "Crimson Peak (2015)", 
+                "The Zookeeper’s Wife (2017)", "Shadow and Bone (Season 1)", "Yasuke (Season 1)"],
+                ["The Color Purple (1985)", "Die Hard (1988)", "Hancock (2008)", 
+                "Mad Max (1980)", "Napoleon Dynamite (2004)", "The Polar Express (2004)", 
+                "Rio (2011)", "The Sandlot (1993)", "Scary Movie 4 (2006)", 
+                "Star Trek: Generations (1994)", "Paranormal Activity 4 (2012)"],
+                ["Night At The Museum", "Star Wars: Clone Wars – Volume I & II", 
+                "Star Wars: Ewoks (S1 & 2)", "The Falcon And The Winter Soldier", 
+                "Sharks of the Bermuda Triangle"],
+                ["Little Big Awesome (Prime Original)", "Red Rock, Season 3", "Vikings, Season 5", 
+                "The Florida Project", "Pass Over (Prime Original)"],
+                ["Tom & Jerry Live Action Movie", "Godzilla vs. Kong", "TINA", 
+                "Covid Diaries NYC", "The Day Sports Stood Still"],
+            ];
+            const images = ["inception.jpg", "polarexpress.jpg", "nightofmuseum.jpg", "blackstallion.jpg", "shazam.jpg"];
+        
+            function listShows(showsArray) {
+                let s = "";
+                s += "<ul>"
+                for (let i = 0; i < showsArray.length; i++)
+                {
+                    s += "<li>" + showsArray[i] + "</li>"
+                }
+                s += "</ul>"
+                return s;
+            }
+
+            function leftCol(service, showsLeaving, showsComing) {
+                let t = "";
+                t += "<h2 style='text-align: center'>" + service + "</h2>"
+                t += "Leaving April 2021:";
+                t += listShows(showsLeaving);
+                t += "Coming April 2021:";
+                t += listShows(showsComing);
+                return t;
+            }
+            
+            function rightCol(imageSrc) {
+                let m = "";
+                m += "<img src='" + imageSrc + "' style='width:300px;height:500px;margin-left:200px;' alt='Show Image'>";
+                return m;
+            }
+            
+            var p = "";
+            for (let i = 0; i < services.length; i++) 
+            {   
+                p += "<tr><td>" + leftCol(services[i], showsLeaving[i], showsComing[i]) + "</td>";
+                p += "<td>" + rightCol("show_images/" + images[i]) + "</td></tr>";
+            }
+            document.writeln(p);
+        </script>
+        </table>
+    </div>
+
+<!-- Individual Page Content Ends Here -->
+
+
+<!-- Add the footer below to every page as well -->
+    
+	<div class="footer">
+		<img src="LogoFooter.png" class="logoFoot"/>
+		<div class="footContain">
+			<div class="flexFoot">
+				<p> Streaming Buddy <p>
+				<a href="#top"> Back to Top </a>
+			</div>
+			<div class="flexFoot">
+				<p> Quick Contact Info </p>
+				<ul>
+					<li> Phone: 111-222-3333 </li>
+					<li> Email: support@streamingbuddy.com </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
