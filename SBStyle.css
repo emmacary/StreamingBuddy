@@ -12,7 +12,7 @@ body {
 	text-align: center;
 	overflow: hidden;
 	align-items: center;
-	width: 99vw;
+	width: 100vw;
 }
 
 /*Makes banner stick to top*/
@@ -198,6 +198,7 @@ p.footer {
 
 .rightcol {
 	flex: 50%;
+    background-color: blue;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -206,6 +207,7 @@ p.footer {
 .leftcol {
 	flex: 50%;
 	display: flex;
+    background-color: green;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
