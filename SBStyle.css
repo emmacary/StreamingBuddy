@@ -36,7 +36,7 @@ body {
 
 .icon {
 	color: black;
-	size: 150%;
+	font-size: 300%;
 }
 
 /*Hides the hamburger icon at first*/
@@ -69,7 +69,7 @@ body {
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 1006px) {
+@media screen and (max-width: 1000px) {
   .nav a {display: none;}
   .nav a.icon {
     float: right;
@@ -78,8 +78,8 @@ body {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 1006px) {
-  .nav.responsive {position: relative;}
+@media screen and (max-width: 1000px) {
+  .nav.responsive {position: relative; padding: 5%;}
   .nav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -89,6 +89,7 @@ body {
     float: none;
     display: block;
     text-align: left;
+    font-size: 200%;
   }
 }
 
@@ -123,6 +124,8 @@ body {
 	margin-right: 5%;
 	padding: 7%;
 	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
 }
 
 .text {
@@ -132,8 +135,10 @@ body {
 
 #boxImg {
 	flex: 50%;
+	align-items: flex-start;
+	flex-wrap: nowrap;
 	width: 1vw;
-	height: auto;
+	overflow: hidden;
 	padding: 2%;
 }
 
@@ -148,7 +153,6 @@ body {
 	font-size: 1.5vw;
 	position: static;
 	width: 100%;
-	padding: 4%;
 }
 
 .logoFoot {
