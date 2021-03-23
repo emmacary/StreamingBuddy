@@ -117,18 +117,14 @@
 			$("#directions").hide();
 			$('#test1').hide();
 			$('#test2').hide();
-
 			if(errorCheck() == false) {
 				return;
 			}
-
 			$("#firstbutton").hide();
 			$("#secondbutton").hide();
 			$("#thirdbutton").hide();
 			$("#reset").show();
-
 			var count = 0;
-
 			if(Player1.q1 == Player2.q1){
 				count += 1;
 			}
@@ -144,8 +140,6 @@
 			if(Player1.q5 == Player2.q5){
 				count += 1;
 			}
-
-
 			if(count == 0){
 				document.getElementById("scoring").innerHTML = "0% MATCH!";
 				document.getElementById("describe").innerHTML = "You are complete opposites! I would never stream together if I were you.";
