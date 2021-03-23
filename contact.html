@@ -123,7 +123,6 @@
 
 
 
-<form onsubmit="return false">
 
     <div class="Bcolor">
           <label for="name">Name</label>
@@ -133,9 +132,8 @@
           <label for="lname" style="vertical-align: top;">Message</label>
           <textarea type="text" cols="40" rows="5" id="emailinfo" name="emailinfo"  class="resizedTextbox"></textarea>
 	   <form onsubmit="return false">
-          <button type="button" id="opener" onclick="clearStuff()">Send</button>
+          <button onsubmit="return false" type="button" id="opener" onclick="clearStuff()">Send</button>
     </div>
-</form>
 
 	    
 
